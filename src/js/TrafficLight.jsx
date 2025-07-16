@@ -3,58 +3,39 @@ import { useState } from "react";
 
 const TrafficLight = () => {
 
-    // Initially, no light is active
-
     const [activeLight, setActiveLight] = useState(null);
 
-    // Define shadow styles (can be more complex for different colors if needed)
-
-    const shadowStyle = '0 0 10px 5px rgba(8, 227, 243, 0.6)';
+    const shadowStyle = '0 0 10px 5px rgba(200, 243, 8, 0.6)';
 
     const setColor = (lightColor) => {
-        setActiveLight(lightColor); // Update the state with the clicked color
+        setActiveLight(lightColor);
     };
 
-
     return (
-        <div className="container text-center">
-            {/* 4. Red Light */}
+        <div className="container d-flex flex-column align-items-center bg-dark w-25 h-75">
             <div
-                className="light-container" // Add a class for consistent styling
-                onClick={() => setColor('red')} // Call setColor when clicked
+                className="light-container"
+                onClick={() => setColor('red')}
                 style={{
                     backgroundColor: 'red',
-                    boxShadow: activeLight === 'red' ? shadowStyle : 'none', // Conditional shadow
-                    ...styles.light // Apply common light styles
-                }}
-            >
-                Red
+                    boxShadow: activeLight === 'red' ? shadowStyle : 'none',
+                    ...styles.light}}>
             </div>
-
-            {/* 5. Yellow Light */}
             <div
                 className="light-container"
                 onClick={() => setColor('yellow')}
                 style={{
                     backgroundColor: 'yellow',
                     boxShadow: activeLight === 'yellow' ? shadowStyle : 'none',
-                    ...styles.light
-                }}
-            >
-                Yellow
+                    ...styles.light}}>
             </div>
-
-            {/* 6. Green Light */}
             <div
                 className="light-container"
                 onClick={() => setColor('green')}
                 style={{
                     backgroundColor: 'green',
                     boxShadow: activeLight === 'green' ? shadowStyle : 'none',
-                    ...styles.light
-                }}
-            >
-                Green
+                    ...styles.light}}>
             </div>
         </div>
     );
@@ -63,16 +44,13 @@ const TrafficLight = () => {
 // Styles for the traffic light elements
 const styles = {
     light: {
-        width: '80px',
-        height: '80px',
+        width: '30px',
+        height: '30px',
         borderRadius: '50%',
-        margin: '10px',
-        cursor: 'pointer',
+        margin: '1px',
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        color: 'white',
-        fontWeight: 'bold',
+        // justifyContent: 'center',
+        // alignItems: 'center',
         transition: 'box-shadow 0.3s ease-in-out', // Smooth transition for shadow
     },
 };
