@@ -1,7 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import TrafficLight from './TrafficLight';
-
 
 //Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,7 +9,7 @@ import "bootstrap"
 import '../styles/index.css'
 
 // components
-import Home from './components/Home';
+import TrafficLight from './components/TrafficLight';
 
 
 const root = ReactDOM.createRoot(document.querySelector('#root'));
