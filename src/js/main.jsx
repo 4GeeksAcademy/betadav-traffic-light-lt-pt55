@@ -13,5 +13,6 @@ import '../styles/index.css'
 // components
 import Home from './components/Home';
 
+
 const root = ReactDOM.createRoot(document.querySelector('#root'));
-root.render(<TrafficLight />);
+root.render(<TrafficLight/>);
